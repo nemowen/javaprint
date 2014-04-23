@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Mytest" language="groovy" pageWidth="380" pageHeight="493" columnWidth="330" leftMargin="25" rightMargin="25" topMargin="3" bottomMargin="3" uuid="e716eeeb-43c1-4ef2-88fb-0e7d4cc7fe6b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SHOP_TITLE" class="java.lang.String"/>
+	<parameter name="OP_DATE" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="countNumber" class="java.lang.String"/>
+	<field name="pa.aa" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="29af993a-b0a6-42c4-9f39-ce7d8ae79a36" x="0" y="51" width="36" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[店铺名称:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="12ab280e-94e2-45fb-a73f-c62d22442a9f" x="38" y="51" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SHOP_TITLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="14a2c8b8-b09e-438a-aa1d-502d5a834d2d" x="207" y="51" width="43" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[报表日期:]]></text>
+			</staticText>
+			<textField pattern="yyyy-MM-dd EEEEE">
+				<reportElement uuid="be15fb96-2682-47e5-8726-1420b02cff57" x="252" y="51" width="75" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{OP_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9e1ac3b6-eab2-4746-a521-7525b2cdead3" x="0" y="9" width="330" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[测试报表]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fc97e7c8-0c01-4b4e-97b0-d9de234bc75b" x="4" y="0" width="59" height="23" backcolor="#999999"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ID序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db1abce1-6395-4b2c-8421-592155fd7383" x="67" y="0" width="100" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7128017c-9948-4730-80ec-9696863f39c1" x="226" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7c4cb779-0849-483f-b39f-4b51b46a5646" x="167" y="0" width="59" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="a7d6e527-fa23-4519-8125-b6021809353a" x="4" y="0" width="59" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bbe4bb1d-3b63-4038-88d8-4bf665cacb6b" x="67" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f2192e38-eb49-47ea-9eb4-2e82e658ccf1" x="226" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{countNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2995295a-17da-4a22-8869-65ad5405f001" x="167" y="0" width="59" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pa.aa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
