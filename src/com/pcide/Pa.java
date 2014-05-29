@@ -1,5 +1,6 @@
 package com.pcide;
 
+/*测试类*/
 public class Pa {
 	
 	private String aa;
